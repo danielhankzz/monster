@@ -1,4 +1,5 @@
 <?php 
+error_reporting(0);
 $link = mysql_connect("localhost", "root", "root");
 mysql_select_db("monster"); //MySQL資料庫名稱
 mysql_query("SET NAMES 'utf8'");
