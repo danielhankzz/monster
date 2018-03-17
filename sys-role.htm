@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- START META SECTION -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Task Composer</title>
+    <meta name="author" content="kyart.com.tw">
+    <meta name="description" content="Task Composer">    
+    <meta name="keywords" content="Task Composer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/img/ico/favicon.ico" />   
+    <!--/ END META SECTION -->
+    <!-- START STYLESHEETS -->   
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/jquery_ui/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/jquery_ui/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="assets/plugins/magnificpopup/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/plugins/owl/assets/owl.carousel.css">
+    <link rel="stylesheet" href="assets/plugins/owl/assets/owl.theme.default.min.css"> 
+    <link rel="stylesheet" href="assets/css/kyart-ui.css">
+    <link rel="stylesheet" href="assets/css/kyart.css">
+    <!-- END STYLESHEETS -->
+    <!--modernizr script -->
+    <script src="assets/js/vendor/modernizr.min.js"></script>
+</head>
+<!--/ END Head -->
+<!-- START Body -->
+
+<body class="grey">
+    <!-- START Header -->
+    <header id="header" class="navbar navbar-fixed-top">
+        <div class="container">
+            <!-- START navbar header -->
+            <div class="navbar-header">
+                <!-- Brand -->
+                <a class="navbar-brand" href="index.htm">
+                    <span class="logo-text">Task Composer</span>
+                </a>
+                <!--/ Brand -->
+            </div>
+         
+            <!-- START Toolbar -->
+            <div class="navbar-toolbar clearfix">
+               
+                <!-- START nav collapse -->
+                <div class="collapse navbar-collapse navbar-collapse-alt" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">                       
+                        <li>
+                            <a href="sys-admin.htm">
+                                <span class="meta">
+                                        <span class="text">編輯</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sys-import.htm">
+                                <span class="meta">
+                                        <span class="text">匯入</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.htm">
+                                <span class="meta">
+                                        <span class="text">TC簡介</span>
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li class="dropdown custom mega memarea">
+                            <!-- 登入後加上aloginbtn 這個class-->
+                            <ul class="">
+                               
+                                <li>
+                                    <a href="member-login.htm" class="btn btn-noborder">
+                                        <span class="meta">
+                                        <span class="text">登入</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="member-signup.htm" class="btn btn-primary nobra">
+                                        <span class="meta">
+                                        <span class="text">註冊</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--/ END nav collapse -->
+            </div>
+            <!--/ END Toolbar -->
+        </div>
+    </header>
+    <!--/ END Header -->
+
+    <!-- START Main -->
+    <section class="main" role="main">
+
+       <section class="apppanel" id="apppanel">
+            <div class="container">
+                <div class="panel-body">
+                    <div class="menubar">
+                       <ul>
+                            <li>
+                                <a href="sys-proj.htm">
+                                    <i class="icok-inbox4-b"></i>
+                                    <span>專案管理</span></a>
+                            </li>
+                            <li>
+                                <a href="sys-role1.htm">
+                                    <i class="icok-grid-alt-b"></i>
+                                    <span>性格角色選擇</span></a>
+                            </li>
+                            <li>
+                                <a href="sys-edit.htm">
+                                    <i class="icok-phonelink2-b"></i>
+                                    <span>情緒編輯</span></a>
+                            </li>
+                            <li>
+                                <a href="sys-device.php">
+                                    <i class="icok-users2-b"></i>
+                                    <span>裝置分派</span></a>
+                            </li>
+                            <li>
+                                <a href="sys-monitor.htm">
+                                    <i class="icok-dashboard3-b"></i>
+                                    <span>服務分析</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="breadcsec">
+                            <ol class="breadcrumb">
+                                <li><a href="index.htm"><i class="fa fa-home" aria-hidden="true"></i> Task Composer</a></li>
+                                <li><a href="#">性格角色管理</a></li>
+                               
+                            </ol>
+                        </div>
+                        <div class="title">
+                            <h3 class="inline">章魚小花</h3>
+                            <div class="btnarea">
+                                <a href="#new-modal" class="btn btn-yellow popup-modal"><i class="fa fa-plus" aria-hidden="true"></i> 新增角色</a>
+                            </div>
+                            <div class="function">
+                                <!-- right -->
+                            </div>
+                        </div>
+
+                        <div class="applist">
+                           <ul>
+                                
+                                <li class="col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000001</span></div>
+                                            <div class="text">
+                                                <h3>英雄型-巴斯光年</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="ol-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000002</span></div>
+                                            <div class="text">
+                                                <h3>忠誠型-胡迪</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000003</span></div>
+                                            <div class="text">
+                                                <h3>調皮型-小小兵</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000004</span></div>
+                                            <div class="text">
+                                                <h3>愚昧無知型-辛普森</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000005</span></div>
+                                            <div class="text">
+                                                <h3>粗魯莽撞型-蠻尼</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000006</span></div>
+                                            <div class="text">
+                                                <h3>慵懶型-蛋黃哥</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+
+								<li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000007</span></div>
+                                            <div class="text">
+                                                <h3>好吃型-魯夫</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000008</span></div>
+                                            <div class="text">
+                                                <h3>自戀型-臭鼬佩佩樂皮尤</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000009</span></div>
+                                            <div class="text">
+                                                <h3>鬼靈精型-米奇</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000010</span></div>
+                                            <div class="text">
+                                                <h3>孤僻型-野口</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000011</span></div>
+                                            <div class="text">
+                                                <h3>冒險型-小當家</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000012</span></div>
+                                            <div class="text">
+                                                <h3>迷糊型-多莉</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox" href="sys-edit.htm">
+                                        <a href="sys-edit.htm" >
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000013</span></div>
+                                            <div class="text">
+                                                <h3>開朗型-哈姆太郎</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000014</span></div>
+                                            <div class="text">
+                                                <h3>搞笑型-兩津堪吉</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000015</span></div>
+                                            <div class="text">
+                                                <h3>淑女型-美少女戰士</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000016</span></div>
+                                            <div class="text">
+                                                <h3>輕度憂鬱症型-驢子 Eeyore</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000017</span></div>
+                                            <div class="text">
+                                                <h3>膽小鬼型-豬八戒</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000018</span></div>
+                                            <div class="text">
+                                                <h3>天真型-小丸子</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000019</span></div>
+                                            <div class="text">
+                                                <h3>規矩型-巧虎</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000020</span></div>
+                                            <div class="text">
+                                                <h3>智謀型-柯南</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000021</span></div>
+                                            <div class="text">
+                                                <h3>喜怒無常型-唐老鴨</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000022</span></div>
+                                            <div class="text">
+                                                <h3>智能低下型-海綿寶寶</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000023</span></div>
+                                            <div class="text">
+                                                <h3>浪漫型-迪士尼公主</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000024</span></div>
+                                            <div class="text">
+                                                <h3>逃避型-查理布朗</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000025</span></div>
+                                            <div class="text">
+                                                <h3>吹牛型-騙人布</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000026</span></div>
+                                            <div class="text">
+                                                <h3>囉嗦型-美冴</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000027</span></div>
+                                            <div class="text">
+                                                <h3>白目型-老皮</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000028</span></div>
+                                            <div class="text">
+                                                <h3>寬厚型-小傑</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000029</span></div>
+                                            <div class="text">
+                                                <h3>體貼型-靜香</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000030</span></div>
+                                            <div class="text">
+                                                <h3>慌張型-大雄</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000031</span></div>
+                                            <div class="text">
+                                                <h3>猥瑣型-蠟筆小新</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-md-3 col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="#edit-modal" class="popup-modal">
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000032</span></div>
+                                            <div class="text">
+                                                <h3>精神分裂型-三葉,瀧</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                        <nav class="Page navigation" aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li><a href="#" class="active">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+    </section>
+    <!-- section -->
+
+
+
+
+    <div id="new-modal" class="mfp-hide white-popup-block">
+        <div id="inline1" class="inlineframe">
+            <div class="paddingframe">
+                <a class="btnclose popup-modal-dismiss" href="#"><i class="icok-cross4-b"></i></a>
+                <h3>新增角色</h3>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="control-label">角色名稱</label>
+                        <input type="text" class="form-control" placeholder="輸入名稱">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="control-label">裝置名稱</label>
+                        <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="control-label">描述</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="poupbtnarea">
+                        <ul>
+                            <li><a href="" class="btn btn-default">確定</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>       
+    </div>
+
+
+    <!-- 編輯 -->
+    <div id="edit-modal" class="mfp-hide white-popup-block">
+        <div id="inline1" class="inlineframe">
+            <div class="paddingframe">
+                <a class="btnclose popup-modal-dismiss" href="#"><i class="icok-cross4-b"></i></a>
+                <h3>章魚絲</h3>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="control-label">裝置名稱</label>
+                        <input type="text" class="form-control" placeholder="章魚絲">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="control-label">專案名稱</label>
+                        <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="control-label">描述</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="poupbtnarea">
+                        <ul>
+                            <li><a href="" class="btn-danger"><i class="icok-trashcan2-b"></i></a></li>
+                            <li><a href="" class="btn btn-default">確定</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>       
+    </div>
+ 
+
+    <!-- jQuery -->
+    <!-- Library 主要設定檔-->
+    <script src="assets/plugins/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/jquery_ui/jquery-ui.min.js"></script>
+    <script src="assets/plugins/magnificpopup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/plugins/owl/owl.carousel.min.js"></script>   
+    <!-- app script -->
+    <script src="assets/js/ui_setting.js"></script>
+    <!--/ app script -->    
+   
+
+</body>
+</html>

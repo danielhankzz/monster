@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- START META SECTION -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Task Composer</title>
+    <meta name="author" content="kyart.com.tw">
+    <meta name="description" content="Task Composer">
+    <meta name="keywords" content="Task Composer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/img/ico/favicon.ico" />
+    <!--/ END META SECTION -->
+    <!-- START STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/jquery_ui/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/jquery_ui/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="assets/plugins/magnificpopup/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/plugins/owl/assets/owl.carousel.css">
+    <link rel="stylesheet" href="assets/plugins/owl/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/kyart-ui.css">
+    <link rel="stylesheet" href="assets/css/kyart.css">
+    <!-- END STYLESHEETS -->
+    <!--modernizr script -->
+    <script src="assets/js/vendor/modernizr.min.js"></script>
+</head>
+<!--/ END Head -->
+<!-- START Body -->
+
+<body class="grey">
+    <!-- START Header -->
+    <header id="header" class="navbar navbar-fixed-top">
+        <div class="container">
+            <!-- START navbar header -->
+            <div class="navbar-header">
+                <!-- Brand -->
+                <a class="navbar-brand" href="index.htm">
+                    <span class="logo-text">Task Composer</span>
+                </a>
+                <!--/ Brand -->
+            </div>
+            <!-- START Toolbar -->
+            <div class="navbar-toolbar clearfix">
+                <!-- START nav collapse -->
+                <div class="collapse navbar-collapse navbar-collapse-alt" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="sys-admin.htm">
+                                <span class="meta">
+                                        <span class="text">編輯</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sys-import.htm">
+                                <span class="meta">
+                                        <span class="text">匯入</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.htm">
+                                <span class="meta">
+                                        <span class="text">TC簡介</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown custom mega memarea">
+                            <!-- 登入後加上aloginbtn 這個class-->
+                            <ul class="">
+                                <li>
+                                    <a href="member-login.htm" class="btn btn-noborder">
+                                        <span class="meta">
+                                        <span class="text">登入</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="member-signup.htm" class="btn btn-primary nobra">
+                                        <span class="meta">
+                                        <span class="text">註冊</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--/ END nav collapse -->
+            </div>
+            <!--/ END Toolbar -->
+        </div>
+    </header>
+    <!--/ END Header -->
+    <!-- START Main -->
+    <section id="main" role="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <!-- Header -->
+                    <div class="section-header section-header-bordered text-center">
+                        <h2 class="section-title">
+                            <p class="font-alt nm">加入會員</p>
+                        </h2>
+                        <p>免費加入會員，接收第一手資訊</p>
+                    </div>
+                    <!--/ Header -->
+                </div>
+                <div class="col-md-6 col-md-offset-3">
+                    <!-- Register form -->
+                    <form class="panel nm" name="form-register" method="post" action="http://brad%40kyart.com.tw:qqqq1111@www.ideas-hatch.org.tw/mem_success.jsp">
+                        <input type="hidden" name="src" value="S">
+                        <input type="hidden" name="id" value="">
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label">
+                                    <span class="red">*</span> Email
+                                    <img class="verify-email-check verify-deny" src="img/deny.gif">
+                                </label>
+                                <div class="has-icon pull-left">
+                                    <input type="text" class="form-control" maxlength="50" name="email" placeholder="請輸入Email">
+                                    <i class="ico-envelop form-control-icon"></i>
+                                </div>
+                                <div class="small">用於登入、收認證信及相關通知</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    <span class="red">*</span> 登入密碼
+                                    <img class="verify-pwd-check verify-deny" src="img/deny.gif">
+                                </label>
+                                <div class="has-icon pull-left">
+                                    <input type="password" class="form-control" maxlength="200" name="login_pwd">
+                                    <i class="ico-key2 form-control-icon"></i>
+                                </div>
+                                <div class="small">請輸入6個字元以上由數字、符號和大小寫英文混合的密碼，密碼至少須包含一個英文字母及數字</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    <span class="red">*</span> 確認密碼
+                                    <img class="verify-pwd2-check verify-deny" src="img/deny.gif">
+                                </label>
+                                <div class="has-icon pull-left">
+                                    <input type="password" class="form-control" maxlength="200" name="login_pwd_2">
+                                    <i class="ico-asterisk form-control-icon"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    <span class="red">*</span> 姓名
+                                    <img class="verify-name-check verify-deny" src="img/deny.gif">
+                                </label>
+                                <div class="has-icon pull-left">
+                                    <input type="text" class="form-control" maxlength="50" name="name">
+                                    <i class="ico-user2 form-control-icon"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    <span class="red">*</span> 聯絡電話
+                                    <img class="verify-phone-check verify-deny" src="img/deny.gif">
+                                </label>
+                                <div class="has-icon pull-left">
+                                    <input type="text" class="form-control" maxlength="50" name="phone">
+                                    <i class="ico-phone form-control-icon"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    <span class="red">*</span> 團隊/公司名稱
+                                    <img class="verify-company-check verify-deny" src="img/deny.gif">
+                                </label>
+                                <div class="has-icon pull-left">
+                                    <input type="text" class="form-control" maxlength="50" name="company">
+                                    <i class="ico-building form-control-icon"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">性別</label>
+                                <div class="radio custom-radio">
+                                    <input type="radio" name="sex" id="sex-M" value="M">
+                                    <label for="sex-M">&nbsp;&nbsp;男</label>
+                                    <input type="radio" name="sex" id="sex-F" value="F">
+                                    <label for="sex-F">&nbsp;&nbsp;女</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">生日</label>
+                                <div class="has-icon pull-left">
+                                    <input type="text" class="form-control hasDatepicker" name="birthday" readonly="" id="dp1512550334530">
+                                    <i class="ico-calendar5 form-control-icon"></i>
+                                </div>
+                            </div>
+                            <p class="semibold text-muted">請輸入驗證碼圖示之文字，英文字母不分大小寫</p>
+                            <p><img src="validCode.gif" class="valid" style="cursor: pointer;"></p>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    <span class="red">*</span> 驗證碼
+                                    <img class="verify-valid-check verify-deny" src="img/deny.gif">
+                                </label>
+                                <input type="text" class="form-control" name="valid">
+                            </div>
+                        </div>
+                        <hr class="nm">
+                        <!--<div class="panel-body">-->
+                        <!--<div class="form-group">-->
+                        <!--<div class="checkbox custom-checkbox">-->
+                        <!--<input type="checkbox" name="agree" id="agree" value="1" class="verify-deny" />-->
+                        <!--<label for="agree">&nbsp;&nbsp;我同意 IDAEAS Hatch <a class="semibold" href="mem_signup_rule.jsp" target="_blank">會員服務條款</a> 及 <a class="semibold" href="privacy.jsp" target="_blank">隱私權政策</a></label>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-block btn-primary" disabled=""><span class="semibold">送出</span></button>
+                        </div>
+                    </form>
+                    <!-- Register form -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="dialog text-entry" style="width: 80%; height: 100%; overflow: auto;">
+        <h3 style="margin: 0; font-weight: bold; text-align: center; line-height: 36px;">
+        財團法人資訊工業策進會
+        <br>蒐集個人資料告知事項暨個人資料提供同意書(P-V4-IDEAS)</h3>
+        <p />
+        <p><span style="font-weight: bold;">財團法人資訊工業策進會(下稱本會)</span>為遵守個人資料保護法令及本會個人資料保護政策、規章，於向您蒐集個人資料前，依法向您告知下列事項，敬請詳閱。</p>
+        <h4>一、蒐集目的及類別</h4>
+        <ul class="nosymbol">
+            <li>
+                本會因辦理或執行業務、活動、計畫、提供服務及供本會用於內部行政管理、陳報主管機關或其他合於本會捐助章程所定業務、寄送本會或產業相關活動訊息之蒐集目的，而需獲取您下列個人資料類別：姓名、聯絡方式(如電話號碼、職稱、電子信箱、居住或工作地址等)、身分證統一編號，或其他得以直接或間接識別您個人之資料。
+                <br /> ※您日後如不願再收到本會所寄送之行銷訊息，可於收到前述訊息時，直接點選訊息內拒絕接受之連結。
+            </li>
+        </ul>
+        <h4>二、個人資料利用之期間、地區、對象及方式</h4>
+        <ul class="nosymbol">
+            <li>除涉及國際業務或活動外，您的個人資料僅供本會於中華民國領域、在前述蒐集目的之必要範圍內，以合理方式利用至蒐集目的消失為止。</li>
+        </ul>
+        <h4>三、當事人權利</h4>
+        <ul class="nosymbol">
+            <li>
+                您可依前述業務、活動所定規則或依本會網站（http://www.iii.org.tw/）「個資當事人行使權利專頁」公告方式向本會行使下列權利：
+                <ul class="nosymbol">
+                    <li>(一)查詢或請求閱覽。</li>
+                    <li>(二)請求製給複製本。</li>
+                    <li>(三)請求補充或更正。</li>
+                    <li>(四)請求停止蒐集、處理及利用</li>
+                    <li>(五)請求刪除您的個人資料。</li>
+                </ul>
+            </li>
+        </ul>
+        <h4>四、不提供個人資料之權益影響</h4>
+        <ul class="nosymbol">
+            <li>若您未提供正確或不提供個人資料，本會將無法為您提供蒐集目的之相關服務。</li>
+        </ul>
+        <h4>五、您瞭解此一同意書符合個人資料保護法及相關法規之要求，且同意本會留存此同意書，供日後取出查驗。</h4>
+        <h4>個人資料之同意提供：</h4>
+        <ul class="nosymbol">
+            <li>一、本人已充分獲知且已瞭解上述貴會告知事項。</li>
+            <li>二、本人同意貴會於所列蒐集目的之必要範圍內，蒐集、處理及利用本人之個人資料。</li>
+        </ul>
+    </div>
+    <!-- jQuery -->
+    <!-- Library 主要設定檔-->
+    <script src="assets/plugins/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/jquery_ui/jquery-ui.min.js"></script>
+    <script src="assets/plugins/magnificpopup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/plugins/owl/owl.carousel.min.js"></script>
+    <!-- app script -->
+    <script src="assets/js/ui_setting.js"></script>
+    <!--/ app script -->
+
+
+    <script type="text/javascript">
+    (function() {
+
+
+         $('.dialog').dialog({
+            title: '蒐集個人資料告知事項',
+            modal: true,
+            width: '90%',
+            height: $(window).height() * 0.8,
+            closeOnEscape: false,
+            buttons: {
+                '同意': function() {
+                    $('.dialog').dialog('close');
+                },
+                '不同意': function() {
+                    window.location.href = 'index.htm';
+                }
+            }
+        });
+
+    })();
+    </script>
+</body>
+
+</html>

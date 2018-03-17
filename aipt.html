@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>宏景</title>>
+</head>
+<body>
+<from name ="focas" action="<?='https://www.focas.fisc.com.tw/FOCAS_WEBPOS/online/'?>" method="post">
+<input type="hidden" name="merID" value="<?=$merID?>"/>
+<input type="hidden" name="MerchantID" value="<?=$gMerchantID?>"/>
+<input type="hidden" name="TerminalID" value="<?=$gTerminalID>"/>
+<input type="hidden" name="MerchantName" value="宏景"/>
+<input type="hidden" name="lidm" value="<?=$OrderNumber>"/>
+<input type="hidden" name="purchAmt" value="<?=$row->total?>"/>
+<input type="hidden" name="AutoCap" value="1"/>
+<input type="hidden" name="AuthResURL" value="http://www.aiptprofessionals.com/focas_return.php"/>
+</from>
+<script language="javascript">
+document.froms.Focas.submit();
+</script>
+</body>
+</html>

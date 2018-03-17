@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- START META SECTION -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Task Composer</title>
+    <meta name="author" content="kyart.com.tw">
+    <meta name="description" content="Task Composer">    
+    <meta name="keywords" content="Task Composer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/img/ico/favicon.ico" />   
+    <!--/ END META SECTION -->
+    <!-- START STYLESHEETS -->   
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/jquery_ui/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/jquery_ui/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="assets/plugins/magnificpopup/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/plugins/owl/assets/owl.carousel.css">
+    <link rel="stylesheet" href="assets/plugins/owl/assets/owl.theme.default.min.css"> 
+    <link rel="stylesheet" href="assets/css/kyart-ui.css">
+    <link rel="stylesheet" href="assets/css/kyart.css">
+    <!-- END STYLESHEETS -->
+    <!--modernizr script -->
+    <script src="assets/js/vendor/modernizr.min.js"></script>
+    <script type="text/javascript" language="javascript" src="assets/js/jquery-1.4.3.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="assets/js/dj_js/jquery-1.11.3.min.js"></script>
+	<!-- 雷达图 -->
+	<script type="text/javascript" src="assets/js/dj_js/Chart.min.js"></script>
+</head>
+<!--/ END Head -->
+
+<!-- START Body -->
+
+<body class="grey">
+    <!-- START Header -->
+    <header id="header" class="navbar navbar-fixed-top">
+        <div class="container">
+            <!-- START navbar header -->
+            <div class="navbar-header">
+                <!-- Brand -->
+                <a class="navbar-brand" href="index.htm">
+                    <span class="logo-text">Task Composer</span>
+                </a>
+                <!--/ Brand -->
+            </div>
+         
+            <!-- START Toolbar -->
+            <div class="navbar-toolbar clearfix">
+               
+                <!-- START nav collapse -->
+                <div class="collapse navbar-collapse navbar-collapse-alt" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">                       
+                        <li>
+                            <a href="sys-admin.htm">
+                                <span class="meta">
+                                        <span class="text">編輯</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sys-import.htm">
+                                <span class="meta">
+                                        <span class="text">匯入</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.htm">
+                                <span class="meta">
+                                        <span class="text">TC簡介</span>
+                                </span>
+                            </a>
+                        </li>
+                        
+                        <li class="dropdown custom mega memarea">
+                            <!-- 登入後加上aloginbtn 這個class-->
+                            <ul class="">
+                               
+                                <li>
+                                    <a href="member-login.htm" class="btn btn-noborder">
+                                        <span class="meta">
+                                        <span class="text">登入</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="member-signup.htm" class="btn btn-primary nobra">
+                                        <span class="meta">
+                                        <span class="text">註冊</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--/ END nav collapse -->
+            </div>
+            <!--/ END Toolbar -->
+        </div>
+    </header>
+    <!--/ END Header -->
+
+    <!-- START Main -->
+    <section class="main" role="main">
+
+       <section class="apppanel" id="apppanel">
+            <div class="container">
+                <div class="panel-body">
+                    <div class="menubar">
+                        <ul>
+                            <li>
+                                <a href="sys-proj.htm">
+                                    <i class="icok-inbox4-b"></i>
+                                    <span>專案管理</span></a>
+                            </li>
+                            <li>
+                                <a href="sys-role1.htm">
+                                    <i class="icok-grid-alt-b"></i>
+                                    <span>性格角色選擇</span></a>
+                            </li>
+                            <li>
+                                <a href="sys-edit.htm">
+                                    <i class="icok-phonelink2-b"></i>
+                                    <span>情緒編輯</span></a>
+                            </li>
+                            <li>
+                                <a href="sys-device.php">
+                                    <i class="icok-users2-b"></i>
+                                    <span>裝置分派</span></a>
+                            </li>
+                            <li>
+                                <a href="sys-monitor.htm">
+                                    <i class="icok-dashboard3-b"></i>
+                                    <span>服務分析</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="breadcsec">
+                            <ol class="breadcrumb">
+                                <li><a href="index.htm"><i class="fa fa-home" aria-hidden="true"></i> Task Composer</a></li>
+                                <li><a href="#">性格角色管理</a></li>
+                               
+                            </ol>
+                        </div>
+                        <div class="title">
+                            <h3 class="inline">章魚小花</h3>
+                            <div class="btnarea">
+                                <a href="#new-modal" class="btn btn-yellow popup-modal"><i class="fa fa-plus" aria-hidden="true"></i> 新增角色</a>
+                            </div>
+                            <div class="function">
+                                <!-- right -->
+                            </div>
+                        </div>
+
+                        <div class="applist">
+                           <ul>
+                                <li class="col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="sys-edit.htm" >
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000001</span></div>
+                                            <div class="text">
+                                                <h3>開朗型-哈姆太郎</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                                <div style="width:95%; display:block; margin:0 auto">
+                                            		<canvas id="myChart1"></canvas>
+                                                </div>
+                                            </div>
+                                            
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="sys-edit.htm" >
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000002</span></div>
+                                            <div class="text">
+                                                <h3>英雄型-巴斯光年</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                                <div style="width:95%; display:block; margin:0 auto">
+                                                    <canvas id="myChart2"></canvas>
+                                                </div>
+                                            </div>
+                                            
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="sys-edit.htm" >
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000003</span></div>
+                                            <div class="text">
+                                                <h3>搞笑型-兩津勘吉</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                                <div style="width:95%; display:block; margin:0 auto">
+                                                    <canvas id="myChart3"></canvas>
+                                                </div>
+                                            </div>
+                                            
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="sys-edit.htm" >
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000004</span></div>
+                                            <div class="text">
+                                                <h3>鬼靈精型-米奇</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                                <div style="width:95%; display:block; margin:0 auto">
+                                                    <canvas id="myChart4"></canvas>
+                                                </div>
+                                            </div>
+                                            
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="sys-edit.htm" >
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000005</span></div>
+                                            <div class="text">
+                                                <h3>冒險家型-小當家</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                                <div style="width:95%; display:block; margin:0 auto">
+                                                    <canvas id="myChart5"></canvas>
+                                                </div>
+                                            </div>
+                                            
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="sys-edit.htm" >
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000006</span></div>
+                                            <div class="text">
+                                                <h3>智謀型-柯南</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                                <div style="width:95%; display:block; margin:0 auto">
+                                                    <canvas id="myChart6"></canvas>
+                                                </div>
+                                            </div>
+                                            
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="sys-edit.htm" >
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000007</span></div>
+                                            <div class="text">
+                                                <h3>自戀型-臭鼬佩佩樂皮尤</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                                <div style="width:95%; display:block; margin:0 auto">
+                                                    <canvas id="myChart7"></canvas>
+                                                </div>
+                                            </div>
+                                            
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="col-xs-6">
+                                    <div class="statusbox">
+                                        <a href="sys-edit.htm" >
+                                            <div class="img"><img src="assets/img/octob.jpg" class="img-responsive"></div>
+                                            <div class="date">ID:<span>0000008</span></div>
+                                            <div class="text">
+                                                <h3>孤僻型-野口</h3>
+                                                <p class="standby">狀態:<span>啟用</span></p>
+                                                <div style="width:95%; display:block; margin:0 auto">
+                                                    <canvas id="myChart8"></canvas>
+                                                </div>
+                                            </div>
+                                            
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <div id="aa"></div> 
+                            </ul>
+                        </div>
+                        <nav class="Page navigation" aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li><a href="sys-role1.htm" class="active">1</a></li>
+                                <li><a href="sys-role2.htm">2</a></li>
+                                <li><a href="sys-role3.htm">3</a></li>
+                                <li><a href="sys-role4.htm">4</a></li>
+                                <li>
+                                    <a href="sys-role2.htm" aria-label="Next">
+                                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+    </section>
+    <!-- section -->
+
+
+
+
+    <div id="new-modal" class="mfp-hide white-popup-block">
+        <div id="inline1" class="inlineframe">
+            <div class="paddingframe">
+                <a class="btnclose popup-modal-dismiss" href="#"><i class="icok-cross4-b"></i></a>
+                <h3>新增角色</h3>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="control-label">角色名稱</label>
+                        <input type="text" class="form-control" placeholder="輸入名稱">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="control-label">裝置名稱</label>
+                        <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="control-label">描述</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="poupbtnarea">
+                        <ul>
+                            <li><a href="" class="btn btn-default">確定</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>       
+    </div>
+
+
+    <!-- 編輯 -->
+    <div id="edit-modal" class="mfp-hide white-popup-block">
+        <div id="inline1" class="inlineframe">
+            <div class="paddingframe">
+                <a class="btnclose popup-modal-dismiss" href="#"><i class="icok-cross4-b"></i></a>
+                <h3>章魚絲</h3>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="control-label">裝置名稱</label>
+                        <input type="text" class="form-control" placeholder="章魚絲">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="control-label">專案名稱</label>
+                        <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="control-label">描述</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="poupbtnarea">
+                        <ul>
+                            <li><a href="" class="btn-danger"><i class="icok-trashcan2-b"></i></a></li>
+                            <li><a href="" class="btn btn-default">確定</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>       
+    </div>
+ 	
+    
+ 	<script>
+                        //第一筆
+                        var radarChartData1 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,5,5,5,5]
+                                }
+                            ]
+                        };
+                        //第二筆
+                        var radarChartData2 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,5,5,5,3]
+                                }
+                            ]
+                        };
+
+                        //第三筆
+                        var radarChartData3 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,5,5,3,5]
+                                }
+                            ]
+                        };
+
+                        //第四筆
+                        var radarChartData4 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,5,5,3,3]
+                                }
+                            ]
+                        };
+                                                //第5筆
+                        var radarChartData5 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,5,3,5,5]
+                                }
+                            ]
+                        };
+                        //第6筆
+                        var radarChartData6 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,5,3,5,3]
+                                }
+                            ]
+                        };
+                        //第7筆
+                        var radarChartData7 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,5,3,3,5]
+                                }
+                            ]
+                        };
+                        //第8筆
+                        var radarChartData8 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,5,3,3,3]
+                                }
+                            ]
+                        };
+                        //第9筆
+                        var radarChartData9 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,3,5,5,5]
+                                }
+                            ]
+                        };
+                        //第10筆
+                        var radarChartData10 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,3,5,5,3]
+                                }
+                            ]
+                        };
+                        //第11筆
+                        var radarChartData11 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,3,5,3,5]
+                                }
+                            ]
+                        };
+                        //第12筆
+                        var radarChartData12 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,3,5,3,3]
+                                }
+                            ]
+                        };
+                        //第13筆
+                        var radarChartData13 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,3,3,5,5]
+                                }
+                            ]
+                        };
+                        //第14筆
+                        var radarChartData14 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,3,3,5,3]
+                                }
+                            ]
+                        };
+                        //第15筆
+                        var radarChartData15 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,3,3,3,5]
+                                }
+                            ]
+                        };
+                        //第16筆
+                        var radarChartData16 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [5,3,3,3,3]
+                                }
+                            ]
+                        };
+                        //第17筆
+                        var radarChartData17 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,5,5,5,5]
+                                }
+                            ]
+                        };
+                        //第18筆
+                        var radarChartData18 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,5,5,5,3]
+                                }
+                            ]
+                        };
+                        //第19筆
+                        var radarChartData19 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,5,5,3,5]
+                                }
+                            ]
+                        };
+                        //第20筆
+                        var radarChartData20 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,5,5,3,3]
+                                }
+                            ]
+                        };
+                        //第21筆
+                        var radarChartData21 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,5,3,5,5]
+                                }
+                            ]
+                        };
+                        //第22筆
+                        var radarChartData22 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,5,3,5,3]
+                                }
+                            ]
+                        };
+                        //第23筆
+                        var radarChartData23 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,5,5,3,5]
+                                }
+                            ]
+                        };
+                        //第24筆
+                        var radarChartData24 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,5,3,3,3]
+                                }
+                            ]
+                        };
+                        //第25筆
+                        var radarChartData25 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,3,5,5,5]
+                                }
+                            ]
+                        };
+                        //第26筆
+                        var radarChartData26 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,3,5,5,3]
+                                }
+                            ]
+                        };
+                        //第27筆
+                        var radarChartData27 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,3,5,3,5]
+                                }
+                            ]
+                        };
+                        //第28筆
+                        var radarChartData28 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,3,5,3,3]
+                                }
+                            ]
+                        };
+                        //第29筆
+                        var radarChartData29 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,3,3,5,5]
+                                }
+                            ]
+                        };
+                        //第30筆
+                        var radarChartData30 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,3,3,5,3]
+                                }
+                            ]
+                        };
+                        //第31筆
+                        var radarChartData31 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,3,3,3,5]
+                                }
+                            ]
+                        };
+                        //第32筆
+                        var radarChartData32 = {
+                            labels: ["開放性", "嚴謹性", "外向性", "順從性", "神經質"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [3,3,3,3,3]
+                                }
+                            ]
+                        };
+
+
+
+                        function a1(){
+                        window.myRadar = new Chart(document.getElementById("myChart1").getContext("2d")).Radar(radarChartData1, {
+                                responsive: true
+                            });
+                        }
+                        function a2(){
+                        window.myRadar = new Chart(document.getElementById("myChart2").getContext("2d")).Radar(radarChartData2, {
+                                responsive: true
+                            });
+                        }
+                        function a3(){
+                        window.myRadar = new Chart(document.getElementById("myChart3").getContext("2d")).Radar(radarChartData3, {
+                                responsive: true
+                            });
+                        }
+                        function a4(){
+                        window.myRadar = new Chart(document.getElementById("myChart4").getContext("2d")).Radar(radarChartData4, {
+                                responsive: true
+                            });
+                        }
+                        function a5(){
+                        window.myRadar = new Chart(document.getElementById("myChart5").getContext("2d")).Radar(radarChartData5, {
+                                responsive: true
+                            });
+                        }
+                        function a6(){
+                        window.myRadar = new Chart(document.getElementById("myChart6").getContext("2d")).Radar(radarChartData6, {
+                                responsive: true
+                            });
+                        }
+                        function a7(){
+                        window.myRadar = new Chart(document.getElementById("myChart7").getContext("2d")).Radar(radarChartData7, {
+                                responsive: true
+                            });
+                        }
+                        function a8(){
+                        window.myRadar = new Chart(document.getElementById("myChart8").getContext("2d")).Radar(radarChartData8, {
+                                responsive: true
+                            });
+                        }
+                        function a9(){
+                        window.myRadar = new Chart(document.getElementById("myChart9").getContext("2d")).Radar(radarChartData9, {
+                                responsive: true
+                            });
+                        }
+                        function a10(){
+                        window.myRadar = new Chart(document.getElementById("myChart10").getContext("2d")).Radar(radarChartData10, {
+                                responsive: true
+                            });
+                        }
+                        function a11(){
+                        window.myRadar = new Chart(document.getElementById("myChart11").getContext("2d")).Radar(radarChartData11, {
+                                responsive: true
+                            });
+                        }
+                        function a12(){
+                        window.myRadar = new Chart(document.getElementById("myChart12").getContext("2d")).Radar(radarChartData12, {
+                                responsive: true
+                            });
+                        }
+                        function a13(){
+                        window.myRadar = new Chart(document.getElementById("myChart13").getContext("2d")).Radar(radarChartData13, {
+                                responsive: true
+                            });
+                        }
+                        function a14(){
+                        window.myRadar = new Chart(document.getElementById("myChart14").getContext("2d")).Radar(radarChartData14, {
+                                responsive: true
+                            });
+                        }
+                        function a15(){
+                        window.myRadar = new Chart(document.getElementById("myChart15").getContext("2d")).Radar(radarChartData15, {
+                                responsive: true
+                            });
+                        }
+                        function a16(){
+                        window.myRadar = new Chart(document.getElementById("myChart16").getContext("2d")).Radar(radarChartData16, {
+                                responsive: true
+                            });
+                        }
+                        function a17(){
+                        window.myRadar = new Chart(document.getElementById("myChart17").getContext("2d")).Radar(radarChartData17, {
+                                responsive: true
+                            });
+                        }
+                        function a18(){
+                        window.myRadar = new Chart(document.getElementById("myChart18").getContext("2d")).Radar(radarChartData18, {
+                                responsive: true
+                            });
+                        }
+                        function a19(){
+                        window.myRadar = new Chart(document.getElementById("myChart19").getContext("2d")).Radar(radarChartData19, {
+                                responsive: true
+                            });
+                        }
+                        function a20(){
+                        window.myRadar = new Chart(document.getElementById("myChart20").getContext("2d")).Radar(radarChartData20, {
+                                responsive: true
+                            });
+                        }
+                        function a21(){
+                        window.myRadar = new Chart(document.getElementById("myChart21").getContext("2d")).Radar(radarChartData21, {
+                                responsive: true
+                            });
+                        }
+                        function a22(){
+                        window.myRadar = new Chart(document.getElementById("myChart22").getContext("2d")).Radar(radarChartData22, {
+                                responsive: true
+                            });
+                        }
+                        function a23(){
+                        window.myRadar = new Chart(document.getElementById("myChart23").getContext("2d")).Radar(radarChartData23, {
+                                responsive: true
+                            });
+                        }
+                        function a24(){
+                        window.myRadar = new Chart(document.getElementById("myChart24").getContext("2d")).Radar(radarChartData24, {
+                                responsive: true
+                            });
+                        }
+                        function a25(){
+                        window.myRadar = new Chart(document.getElementById("myChart25").getContext("2d")).Radar(radarChartData25, {
+                                responsive: true
+                            });
+                        }
+                        function a26(){
+                        window.myRadar = new Chart(document.getElementById("myChart26").getContext("2d")).Radar(radarChartData26, {
+                                responsive: true
+                            });
+                        }
+                        function a27(){
+                        window.myRadar = new Chart(document.getElementById("myChart27").getContext("2d")).Radar(radarChartData27, {
+                                responsive: true
+                            });
+                        }
+                        function a28(){
+                        window.myRadar = new Chart(document.getElementById("myChart28").getContext("2d")).Radar(radarChartData28, {
+                                responsive: true
+                            });
+                        }
+                        function a29(){
+                        window.myRadar = new Chart(document.getElementById("myChart1").getContext("2d")).Radar(radarChartData29, {
+                                responsive: true
+                            });
+                        }
+                        function a30(){
+                        window.myRadar = new Chart(document.getElementById("myChart30").getContext("2d")).Radar(radarChartData30, {
+                                responsive: true
+                            });
+                        }
+                        function a31(){
+                        window.myRadar = new Chart(document.getElementById("myChart31").getContext("2d")).Radar(radarChartData31, {
+                                responsive: true
+                            });
+                        }
+                        function a32(){
+                        window.myRadar = new Chart(document.getElementById("myChart32").getContext("2d")).Radar(radarChartData32, {
+                                responsive: true
+                            });
+                        }
+
+
+
+                        function addLoadEvent(func) {
+                            var oldonload = window.onload;
+                            if (typeof window.onload != 'function') {
+                            window.onload = func;
+                            } else {  
+                                window.onload = function() {
+                                oldonload();
+                                func();
+                                    }
+                                }
+                        }
+
+                        addLoadEvent(a1);
+                        addLoadEvent(a2);
+                        addLoadEvent(a3);
+                        addLoadEvent(a4);
+                        addLoadEvent(a5);
+                        addLoadEvent(a6);
+                        addLoadEvent(a7);
+                        addLoadEvent(a8);
+                        addLoadEvent(a9);
+                        addLoadEvent(a10);
+                        addLoadEvent(a11);
+                        addLoadEvent(a12);
+                        addLoadEvent(a13);
+                        addLoadEvent(a14);
+                        addLoadEvent(a15);
+                        addLoadEvent(a16);
+                        addLoadEvent(a17);
+                        addLoadEvent(a18);
+                        addLoadEvent(a19);
+                        addLoadEvent(a20);
+                        addLoadEvent(a21);
+                        addLoadEvent(a22);
+                        addLoadEvent(a23);
+                        addLoadEvent(a24);
+                        addLoadEvent(a25);
+                        addLoadEvent(a26);
+                        addLoadEvent(a27);
+                        addLoadEvent(a28);
+                        addLoadEvent(a29);
+                        addLoadEvent(a30);
+                        addLoadEvent(a31);
+                        addLoadEvent(a32);
+
+
+                       
+
+    </script>
+
+    <!--
+     window.onload = function(){
+                            window.myRadar = new Chart(document.getElementById("myChart1").getContext("2d")).Radar(radarChartData1, {
+                                responsive: true
+                            });
+                        }
+    <script type="text/javascript" language="javascript">
+    $.get('laida.txt', function(data) {            
+            //alert(data);
+            //var radarChartData = $ 
+            var _data = $(this);
+
+            window.onload = function(){
+                            window.myRadar = new Chart(document.getElementById("myChart").getContext("2d")).Radar(_data, {
+                                responsive: true
+                            });
+                        }
+    });
+    
+    
+    </script>
+    -->
+
+    <!-- jQuery -->
+    
+	<!-- 雷达图 -->
+	
+	<!-- End -->
+    <!-- Library 主要設定檔-->
+    <script src="assets/plugins/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/jquery_ui/jquery-ui.min.js"></script>
+    <script src="assets/plugins/magnificpopup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/plugins/owl/owl.carousel.min.js"></script>   
+    <!-- app script -->
+    <script src="assets/js/ui_setting.js"></script>
+    <!--/ app script -->    
+   
+
+</body>
+</html>

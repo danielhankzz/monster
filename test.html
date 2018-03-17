@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html"; charset="utf-8">
+<title></title>
+</head>
+<script type="text/javascript">
+    function CanModify()
+    {
+        document.getElementById('input').style.display='block';
+        document.getElementById('input').focus();
+    }
+    function DisModify()
+    {
+        if (event.keyCode == 13)
+        {
+            document.getElementById('input').style.display='none';
+        
+            var contents=document.getElementById('input').value;
+            document.getElementById('content').innerHTML = contents;
+            
+        }
+    }
+</script>
+<body bgcolor="#FFCC99">
+<table style="z-index: 2; border: 1px; background-color: #aaeeaa; width: 155px;" ondblclick="CanModify()">
+<tr>
+<td><div id="content">123</div>
+</td>
+</tr>
+</table>
+<input type="text" id="input" name="test" value="124234233" style="display:none; height:20px; z-index: 1; position: absolute; top: 7px;" onKeyDown="DisModify()" onKeyPress="DisModify()">
+</body>    
+</html>
