@@ -239,36 +239,84 @@ mysql_query("SET collation_connection = 'utf8_general_ci'");
                                     <div class="task-list" action="content.php" method="post">
 
                                         <?php
-                                        $uiconnect="SELECT introduction,mantra FROM name";
+                                        $uiconnect="SELECT * FROM name";
                                         $uitotal = mysql_query($uiconnect,$link);
                                         $uiuse = mysql_query($uiconnect,$link);
                                         $row = mysql_fetch_array($uiuse);
                                         
-
+                                        //////////////////////////////
                                         echo '<div class="task-master">
                                             
                                             <div class="droppable-area" style=" height: 50px;">';
 
-                                        echo '待機&nbsp;&nbsp; <div id="content00" class="task task-item ui-draggable ui-draggable-handle rootitem color01 ui-sortable-handle" ondblclick="CanModify00()" data-item-mantra="';
+                                        echo '待機1&nbsp;&nbsp; <div id="content01" class="task task-item ui-draggable ui-draggable-handle rootitem color01 ui-sortable-handle" ondblclick="CanModify01()" data-item-mantra1="';
 
-                                        echo $row['mantra'];
+                                        echo $row['mantra1'];
 
-                                        echo '" style="width: auto;"><span id="content00" class="color01">';
+                                        echo '" style="width: auto;"><span id="content01" class="color01">';
 
-                                        echo $row['mantra'];
+                                        echo $row['mantra1'];
 
                                         echo '<div class="hover-tip ui-sortable-handle"><div class="action-btn ui-sortable-handle"></div></div></span>    
-                                            <input type="text" id="input00" name="test" value="';
+                                            <input type="text" id="input01" name="test" value="';
 
-                                        echo $row['mantra'];
+                                        echo $row['mantra1'];
 
-                                        echo '" class="color01" style="display:none; height:20px; z-index: 1; position: absolute; top: 5px;" onkeydown="DisModify00()" onkeypress="DisModify00()">
+                                        echo '" class="color01" style="display:none; height:20px; z-index: 1; position: absolute; top: 5px;" onkeydown="DisModify01()" onkeypress="DisModify01()">
                                             </div>';
 
                                                 
                                         echo ' </div>
                                         </div>';
 
+                                        //////////////////////////////
+                                        echo '<div class="task-master">
+                                            
+                                            <div class="droppable-area" style=" height: 50px;">';
+
+                                        echo '待機2&nbsp;&nbsp; <div id="content02" class="task task-item ui-draggable ui-draggable-handle rootitem color01 ui-sortable-handle" ondblclick="CanModify02()" data-item-mantra2="';
+
+                                        echo $row['mantra2'];
+
+                                        echo '" style="width: auto;"><span id="content02" class="color01">';
+
+                                        echo $row['mantra2'];
+
+                                        echo '<div class="hover-tip ui-sortable-handle"><div class="action-btn ui-sortable-handle"></div></div></span>    
+                                            <input type="text" id="input02" name="test" value="';
+
+                                        echo $row['mantra2'];
+
+                                        echo '" class="color01" style="display:none; height:20px; z-index: 1; position: absolute; top: 5px;" onkeydown="DisModify02()" onkeypress="DisModify02()">
+                                            </div>';
+
+                                                
+                                        echo ' </div>
+                                        </div>';
+                                        //////////////////////////////
+                                        echo '<div class="task-master">
+                                            
+                                            <div class="droppable-area" style=" height: 50px;">';
+
+                                        echo '待機3&nbsp;&nbsp; <div id="content03" class="task task-item ui-draggable ui-draggable-handle rootitem color03 ui-sortable-handle" ondblclick="CanModify03()" data-item-mantra3="';
+
+                                        echo $row['mantra3'];
+
+                                        echo '" style="width: auto;"><span id="content03" class="color01">';
+
+                                        echo $row['mantra3'];
+
+                                        echo '<div class="hover-tip ui-sortable-handle"><div class="action-btn ui-sortable-handle"></div></div></span>    
+                                            <input type="text" id="input02" name="test" value="';
+
+                                        echo $row['mantra3'];
+
+                                        echo '" class="color01" style="display:none; height:20px; z-index: 1; position: absolute; top: 5px;" onkeydown="DisModify03()" onkeypress="DisModify03()">
+                                            </div>';
+
+                                                
+                                        echo ' </div>
+                                        </div>';
                                         /////////////////////////////////////
                                         echo '<div class="task-master">
                                             
@@ -1090,7 +1138,9 @@ mysql_query("SET collation_connection = 'utf8_general_ci'");
         ret['id'] = item.data('item-id');
         ret['emotion'] = item.data('item-emotion');
         ret['introduction'] = item.data('item-introduction');
-        ret['mantra'] = item.data('item-mantra');
+        ret['mantra1'] = item.data('item-mantra1');
+        ret['mantra2'] = item.data('item-mantra2');
+        ret['mantra3'] = item.data('item-mantra3');
         var items = [];
         item.children('.branchdroppable').children('.task').each(function(){
             var _item = $(this);
@@ -1103,23 +1153,65 @@ mysql_query("SET collation_connection = 'utf8_general_ci'");
         
     }
 
-    function CanModify00()
+    function CanModify01()
     {
-        document.getElementById('input00').style.display='block';
-        document.getElementById('input00').focus();
+        document.getElementById('input01').style.display='block';
+        document.getElementById('input01').focus();
 
     }
-    function DisModify00()
+    function DisModify01()
     {
         if (event.keyCode == 13)
         {
-            document.getElementById('input00').style.display='none';
+            document.getElementById('input01').style.display='none';
         
-            var contents00=document.getElementById('input00').value;
-            document.getElementById('content00').innerHTML = contents00;
-            var b = document.getElementById("content00");
-            var value_big = b.getAttribute("data-item-mantra");//获取值
-            b.setAttribute("data-item-mantra", contents00); //设置值
+            var contents01=document.getElementById('input01').value;
+            document.getElementById('content01').innerHTML = contents01;
+            var b = document.getElementById("content01");
+            var value_big = b.getAttribute("data-item-mantra1");//获取值
+            b.setAttribute("data-item-mantra1", contents01); //设置值
+            
+        }
+    }
+
+    function CanModify02()
+    {
+        document.getElementById('input02').style.display='block';
+        document.getElementById('input02').focus();
+
+    }
+    function DisModify02()
+    {
+        if (event.keyCode == 13)
+        {
+            document.getElementById('input02').style.display='none';
+        
+            var contents02=document.getElementById('input02').value;
+            document.getElementById('content02').innerHTML = contents02;
+            var b = document.getElementById("content02");
+            var value_big = b.getAttribute("data-item-mantra2");//获取值
+            b.setAttribute("data-item-mantra2", contents00); //设置值
+            
+        }
+    }
+
+    function CanModify03()
+    {
+        document.getElementById('input03').style.display='block';
+        document.getElementById('input03').focus();
+
+    }
+    function DisModify03()
+    {
+        if (event.keyCode == 13)
+        {
+            document.getElementById('input03').style.display='none';
+        
+            var contents03=document.getElementById('input03').value;
+            document.getElementById('content03').innerHTML = contents03;
+            var b = document.getElementById("content03");
+            var value_big = b.getAttribute("data-item-mantra3");//获取值
+            b.setAttribute("data-item-mantra3", contents00); //设置值
             
         }
     }

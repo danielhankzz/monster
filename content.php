@@ -68,7 +68,9 @@
            $x=1;
           
            $query1 = "UPDATE name SET 
-                 mantra= 1414141141,
+                 mantra1= 141414522141141,
+                 mantra2= 141414534541141,
+                 mantra3= 141412345141141,
                  introduction= 4141414  
                  WHERE id = 1 ";
            $table_data1 .= '
@@ -83,7 +85,6 @@
             {
              die('Error: ' . mysql_error());
             }
-
               $x++;
            }
 
