@@ -26,8 +26,12 @@ if(in_array($ext,$allowed_types))
 if(($i+1)%4==0) $nomargin='nomargin'; 
 
 echo ' 
-<div class="pic '.$nomargin.'" style="background:url('.$directory.'/'.$file.') no-repeat 40% 40%;"> 
-<a href="'.$directory.'/'.$file.'" title="'.$title.'" target="_blank">'.$title.'</a> 
+<div> 
+
+
+<p><img class="alignnone wp-image-90 size-full" src="'.$directory.'/'.$file.'" alt="" width="600" height="300"></p>
+
+
 </div>'; 
 
 $i++; 

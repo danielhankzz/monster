@@ -172,9 +172,35 @@ mysql_query("SET collation_connection = 'utf8_general_ci'");
                                         <a class="cate-header" role="button" data-toggle="collapse" href="#collapseExample01" aria-expanded="false" aria-controls="collapseExample01">技能</a>
                                         <div class="collapse" id="collapseExample01">
                                             <div class="item-list">
-                                                <div class="task-item " data-item-id="1-1"><span class="color01">技能一</span></div>
-                                                <div class="task-item " data-item-id="1-2"><span class="color01">技能二</span></div>
-                                                <div class="task-item " data-item-id="1-3"><span class="color01">技能三</span></div>
+                                                <?php
+                                                    $directory = 'image'; 
+                                                    $allowed_types=array('jpg','jpeg','gif','png'); 
+                                                    $file_parts=array(); 
+                                                    $ext=''; 
+                                                    $title=''; 
+                                                    $i=0; 
+                                                    $dir_handle = @opendir($directory) or die("there is an error with your image directory!"); 
+                                                    while ($file = readdir($dir_handle)) 
+                                                    { 
+                                                        if($file=='.' || $file == '..') continue; 
+                                                        $file_parts = explode('.',$file); 
+                                                        $ext = strtolower(array_pop($file_parts)); 
+                                                        $title = implode('.',$file_parts); 
+                                                        $title = htmlspecialchars($title); 
+                                                        $nomargin=''; 
+                                                        if(in_array($ext,$allowed_types)) 
+                                                    { 
+                                                        if(($i+1)%4==0) $nomargin='nomargin'; 
+                                                        echo ' 
+                                                        <div class="task-item " data-item-id="4-2-4"> 
+                                                        <span class="color01"><p><img class="alignnone wp-image-90 size-full" src="'.$directory.'/'.$file.'" alt="" width="50" height="40"></p></span>
+                                                        </div>'; 
+                                                        $i++; 
+                                                            } 
+                                                    } 
+                                                    closedir($dir_handle);
+                                                ?>
+
                                                 <!--<div class="task-item " data-item-id="1-4"><span class="color01">暫停</span></div>-->
                                                 <!--<div class="task-item " data-item-id="1-5"><span class="color01">技能一</span></div>-->
                                                 <!--<div class="task-item " data-item-id="1-6"><span class="color01">觸發值</span></div>-->
@@ -247,7 +273,7 @@ mysql_query("SET collation_connection = 'utf8_general_ci'");
                                         //////////////////////////////
                                         echo '<div class="task-master">
                                             
-                                            <div class="droppable-area" style=" height: 50px;">';
+                                            <div class="droppable-area" style=" height: 100px;">';
 
                                         echo '待機1&nbsp;&nbsp; <div id="content01" class="task task-item ui-draggable ui-draggable-handle rootitem color01 ui-sortable-handle" ondblclick="CanModify01()" data-item-mantra1="';
 
@@ -272,7 +298,7 @@ mysql_query("SET collation_connection = 'utf8_general_ci'");
                                         //////////////////////////////
                                         echo '<div class="task-master">
                                             
-                                            <div class="droppable-area" style=" height: 50px;">';
+                                            <div class="droppable-area" style=" height: 100px;">';
 
                                         echo '待機2&nbsp;&nbsp; <div id="content02" class="task task-item ui-draggable ui-draggable-handle rootitem color01 ui-sortable-handle" ondblclick="CanModify02()" data-item-mantra2="';
 
@@ -296,9 +322,9 @@ mysql_query("SET collation_connection = 'utf8_general_ci'");
                                         //////////////////////////////
                                         echo '<div class="task-master">
                                             
-                                            <div class="droppable-area" style=" height: 50px;">';
+                                            <div class="droppable-area" style=" height: 100px;">';
 
-                                        echo '待機3&nbsp;&nbsp; <div id="content03" class="task task-item ui-draggable ui-draggable-handle rootitem color03 ui-sortable-handle" ondblclick="CanModify03()" data-item-mantra3="';
+                                        echo '待機3&nbsp;&nbsp; <div id="content03" class="task task-item ui-draggable ui-draggable-handle rootitem color01 ui-sortable-handle" ondblclick="CanModify03()" data-item-mantra3="';
 
                                         echo $row['mantra3'];
 
@@ -307,7 +333,7 @@ mysql_query("SET collation_connection = 'utf8_general_ci'");
                                         echo $row['mantra3'];
 
                                         echo '<div class="hover-tip ui-sortable-handle"><div class="action-btn ui-sortable-handle"></div></div></span>    
-                                            <input type="text" id="input02" name="test" value="';
+                                            <input type="text" id="input03" name="test" value="';
 
                                         echo $row['mantra3'];
 
@@ -320,7 +346,7 @@ mysql_query("SET collation_connection = 'utf8_general_ci'");
                                         /////////////////////////////////////
                                         echo '<div class="task-master">
                                             
-                                            <div class="droppable-area" style=" height: 50px;">';
+                                            <div class="droppable-area" style=" height: 100px;">';
 
                                         echo '自我介紹&nbsp;&nbsp;<div id="content0" class="task task-item ui-draggable ui-draggable-handle rootitem color01 ui-sortable-handle" ondblclick="CanModify0()" data-item-introduction="';
 
@@ -341,15 +367,6 @@ mysql_query("SET collation_connection = 'utf8_general_ci'");
                                                 
                                         echo ' </div>
                                         </div>';
-
-                                        
-
-
-
-
-
-                                        
-
 
                                         ?>
                                         <?php
@@ -1190,7 +1207,7 @@ mysql_query("SET collation_connection = 'utf8_general_ci'");
             document.getElementById('content02').innerHTML = contents02;
             var b = document.getElementById("content02");
             var value_big = b.getAttribute("data-item-mantra2");//获取值
-            b.setAttribute("data-item-mantra2", contents00); //设置值
+            b.setAttribute("data-item-mantra2", contents02); //设置值
             
         }
     }
@@ -1211,7 +1228,7 @@ mysql_query("SET collation_connection = 'utf8_general_ci'");
             document.getElementById('content03').innerHTML = contents03;
             var b = document.getElementById("content03");
             var value_big = b.getAttribute("data-item-mantra3");//获取值
-            b.setAttribute("data-item-mantra3", contents00); //设置值
+            b.setAttribute("data-item-mantra3", contents03); //设置值
             
         }
     }

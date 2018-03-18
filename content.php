@@ -1,30 +1,10 @@
 
-<html>  
-      <head>  
-           <title>Webslesson Tutorial</title> 
-           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-     <style>
-   
-   .box
-   {
-    width:750px;
-    padding:20px;
-    background-color:#fff;
-    border:1px solid #ccc;
-    border-radius:5px;
-    margin-top:100px;
-   }
-  </style>
-      </head>  
-      <body>  
-        <div class="container box">
-          <h3 align="center">Import JSON File Data into Mysql Database in PHP</h3><br />
           <?php
           error_reporting(0);
           $connect = mysql_connect("localhost","root","root");			
           mysql_select_db("test",$connect);
+          $connect1 = mysql_connect("localhost","root","root");      
+          mysql_select_db("test",$connect1);
 		      mysql_query("SET NAMES 'utf8'");
 		      mysql_query("SET CHARACTER SET utf8"); 
 		      mysql_query("SET collation_connection = 'utf8_general_ci'");
@@ -63,29 +43,30 @@
 				      $x++;
            }
 
-           foreach($array2 as $row1) //Extract the Array Values by using Foreach Loop
+          foreach($array2 as $row1) //Extract the Array Values by using Foreach Loop
           {
-           $x=1;
-          
+           $y=1;
+           echo $row1[mantra1];
            $query1 = "UPDATE name SET 
-                 mantra1= 141414522141141,
-                 mantra2= 141414534541141,
-                 mantra3= 141412345141141,
-                 introduction= 4141414  
+                 mantra1= '$row1[mantra1]' ,
+                 mantra2= '$row1[mantra2]' ,
+                 mantra3= '$row1[mantra3]' ,
+                 introduction= '$row1[introduction]'  
                  WHERE id = 1 ";
            $table_data1 .= '
-            <tr>
-          
-          <td>'.$row1["mantra"].'</td
+          <tr>
+          <td>'.$row1["mantra1"].'</td
+          <td>'.$row1["mantra2"].'</td
+          <td>'.$row1["mantra3"].'</td
           <td>'.$row1["introduction"].'</td
           </tr>
            '; //Data for display on Web page
             //$q = mysql_query($connect,$query) or die (mysqli_error($connect));
-            if (!mysql_query($query1,$connect))
+            if (!mysql_query($query1,$connect1))
             {
              die('Error: ' . mysql_error());
             }
-              $x++;
+              $y++;
            }
 
 
@@ -104,9 +85,9 @@
      			//echo $table_data;  
           	}
 
-          if(!mysql_query($connect, $query1)) //Run Mutliple Insert Query
+          if(!mysql_query($connect1, $query1)) //Run Mutliple Insert Query
            {
-          //echo $table_data1;  
+          echo $table_data1;  
             }
 
 
@@ -120,7 +101,7 @@
           $myJSON = json_encode($array1, JSON_UNESCAPED_UNICODE);
           $myJSON = str_replace('\"','' , $myJSON);
           //$myJSON = json_encode($array1, JSON_UNESCAPED_UNICODE);
-          echo $myJSON;
+          //echo $myJSON;
           //header("Location:http://150.117.122.192/monster/api/rolesetting.do?jdatas=$myJSON"); 
           //Brian
           echo "<script type='text/javascript'>";
@@ -129,7 +110,3 @@
           //echo "location.href ='http://150.117.122.192/monster/api/rolesetting.do?jdatas='+$myJSON";
           echo "</script>"; 
           ?>
-     <br />
-         </div>  
-      </body>  
- </html>
