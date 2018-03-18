@@ -3,8 +3,6 @@
           error_reporting(0);
           $connect = mysql_connect("localhost","root","root");			
           mysql_select_db("test",$connect);
-          $connect1 = mysql_connect("localhost","root","root");      
-          mysql_select_db("test",$connect1);
 		      mysql_query("SET NAMES 'utf8'");
 		      mysql_query("SET CHARACTER SET utf8"); 
 		      mysql_query("SET collation_connection = 'utf8_general_ci'");
@@ -17,7 +15,7 @@
           $str = $_GET[value];
           //$data = file_get_contents($str); //Read the JSON file in PHP
           $array = json_decode($str, true); //Convert JSON String into PHP Array
-          $array2 = json_decode($str, true); //Convert JSON String into PHP Array
+          //$array2 = json_decode($str, true); //Convert JSON String into PHP Array
           //print_r($array);
           foreach($array as $row) //Extract the Array Values by using Foreach Loop
           {
@@ -43,7 +41,7 @@
 				      $x++;
            }
 
-          foreach($array2 as $row1) //Extract the Array Values by using Foreach Loop
+          foreach($array as $row1) //Extract the Array Values by using Foreach Loop
           {
            $y=1;
            echo $row1[mantra1];
@@ -53,16 +51,9 @@
                  mantra3= '$row1[mantra3]' ,
                  introduction= '$row1[introduction]'  
                  WHERE id = 1 ";
-           $table_data1 .= '
-          <tr>
-          <td>'.$row1["mantra1"].'</td
-          <td>'.$row1["mantra2"].'</td
-          <td>'.$row1["mantra3"].'</td
-          <td>'.$row1["introduction"].'</td
-          </tr>
-           '; //Data for display on Web page
+            //Data for display on Web page
             //$q = mysql_query($connect,$query) or die (mysqli_error($connect));
-            if (!mysql_query($query1,$connect1))
+            if (!mysql_query($query1,$connect))
             {
              die('Error: ' . mysql_error());
             }
@@ -85,9 +76,9 @@
      			//echo $table_data;  
           	}
 
-          if(!mysql_query($connect1, $query1)) //Run Mutliple Insert Query
+          if(!mysql_query($connect, $query1)) //Run Mutliple Insert Query
            {
-          echo $table_data1;  
+          //echo $table_data1;  
             }
 
 
